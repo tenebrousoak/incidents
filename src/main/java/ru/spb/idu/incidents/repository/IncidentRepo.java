@@ -10,6 +10,7 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface IncidentRepo extends PagingAndSortingRepository<Incident, Long> {
-    @RestResource(path = "getByDate", rel = "getByDate")
-    public List<Incident> findAllByStartGreaterThanEqualAndStartLessThanEqual(Date minDate, Date maxDate);
+  @RestResource(path = "getByDate", rel = "getByDate")
+  List<Incident> findAllByStartGreaterThanEqualAndStartLessThanEqual(
+          Date minDate, Date maxDate);
 }
